@@ -88,6 +88,9 @@ const OpenLayersMap = () => {
             <button style={{ border: "1px solid red" }} onClick={handleMove}>
                 Se mexer
             </button>
+
+            <div>Lat: {lonLat[0]}</div>
+            <div>Long: {lonLat[1]}</div>
             <div id="map" style={{ width: "100%", height: "80vh" }} />
         </>
     );
