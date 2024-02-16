@@ -70,6 +70,7 @@ const OpenLayersMap = () => {
 
     useEffect(() => {
         if (typeof window !== "undefined" && "geolocation" in navigator) {
+            console.log("hey");
             navigator.geolocation.watchPosition((position) => {
                 setLonLat([
                     position.coords.longitude,
@@ -77,7 +78,7 @@ const OpenLayersMap = () => {
                 ]);
             });
         }
-    }, []);
+    });
 
     const handleMove = () => {
         setLonLat([lonLat[0] + 0.05, lonLat[1] + 0.05]);
